@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SingleTodo from '@/components/SingleTodo.vue';
+import { useTodosStore } from '@/stores/todos.ts';
+import { storeToRefs } from 'pinia';
 
-const todos = ref<string[]>([]);
+const todoStore = useTodosStore();
+const { todos } = storeToRefs(todoStore);
+
 const todoName = ref('');
 
 function addTodo() {
-  todos.value.push(todoName.value);
+  todoStore.addNewTodo(todoName.value, false);
 }
 </script>
 
@@ -14,7 +18,7 @@ function addTodo() {
   <main>
     <div class="my-8">
       <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
-        <SingleTodo :todo-text="todo" />
+        <SingleTodo :todo-text="todo.text" :complete="todo.complete" />
       </div>
 
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
