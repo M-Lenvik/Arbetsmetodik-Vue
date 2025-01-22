@@ -59,7 +59,7 @@ export const useTodosStore = defineStore('todos', () => {
     // Öka id:t för vår nästa todo
     nextId.value += 1;
 
-    todos.value.push({ text, complete });
+    todos.value.push({ text, complete, id: nextId.value }); // [!code highglight]
 
     saveTodosToLocalStorage();
   }
