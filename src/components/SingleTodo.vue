@@ -8,12 +8,18 @@ const props = defineProps({
   complete: { type: Boolean, default: false },
 });
 
+const emit = defineEmits(['taskCompleted']);
+
 const todoStore = useTodosStore();
 
 const isDone = ref(props.complete);
 
 function toggleCompletedState() {
   isDone.value = !isDone.value;
+
+  if (isDone.value) {
+    emit('taskCompleted');
+  }
 
   todoStore.toggleTodoState(props.id, isDone.value);
 }
