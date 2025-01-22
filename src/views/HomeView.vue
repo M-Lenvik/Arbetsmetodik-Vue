@@ -35,7 +35,7 @@ function clearMessage() {
 
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
     </div>
-    <input type="text" v-model="todoName" @keyup.enter="addTodo" />
+    <input type="text" v-model="todoName" class="text-black bg-white border rounded" @keyup.enter="addTodo" />
     <button @click="addTodo">Lägg till todo</button>
   </main>
 </template>
