@@ -18,7 +18,7 @@ function addTodo() {
   <main>
     <div class="my-8">
       <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
-        <SingleTodo :todo-text="todo.text" :complete="todo.complete" />
+        <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" />
       </div>
 
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
