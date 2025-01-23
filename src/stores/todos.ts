@@ -64,6 +64,18 @@ export const useTodosStore = defineStore('todos', () => {
     saveTodosToLocalStorage();
   }
 
+  function removeTodo(id: number): void {
+    todos.value = todos.value.filter(todo => todo.id !== id);
+
+    saveTodosToLocalStorage();
+    console.log('knapptryckning');
+
+    if (DEBUGGING) {
+      console.log('Borttagen todo med id: ' + id);
+      console.table(todos.value);
+    }
+  }
+
   function toggleTodoState(id: number, isComplete: boolean): void {
     const item = todos.value.find(todo => todo.id === id);
     if (item) {
@@ -77,7 +89,7 @@ export const useTodosStore = defineStore('todos', () => {
     getTodosFromLocalStorage();
   });
 
-  return { todos, addNewTodo, toggleTodoState };
+  return { todos, addNewTodo, toggleTodoState, removeTodo };
 });
 
 // Används medan vi utvecklar så att ändringar vi skriver i denna fil

@@ -26,7 +26,7 @@ function clearMessage() {
 </script>
 
 <template>
-  <main>
+  <main class="bg-gray-700 px-2 py-2 mx-4 my-4">
     <div class="my-8">
       <p v-if="showCompletedMessage">Snyggt jobbat med att göra klart en uppgift!</p>
 
@@ -37,6 +37,6 @@ function clearMessage() {
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
     </div>
     <input type="text" v-model="todoName" class="text-black bg-white border rounded" @keyup.enter="addTodo" />
-    <button @click="addTodo">Lägg till todo</button>
+    <button @click="addTodo" class="mb-4">Lägg till todo</button>
   </main>
 </template>

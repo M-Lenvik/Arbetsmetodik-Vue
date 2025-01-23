@@ -20,18 +20,25 @@ function toggleCompletedState() {
   if (isDone.value) {
     emit('taskCompleted');
   }
-
   todoStore.toggleTodoState(props.id, isDone.value);
+}
+
+function removeTodo() {
+  todoStore.removeTodo(props.id); // Anropa removeTodo-funktionen i store
 }
 </script>
 
 <template>
   <div :class="{ completed: isDone }" class="grid grid-cols-2 gap-2">
     <div>{{ todoText }}</div>
-    <div>
-      <button @click="toggleCompletedState">
+    <div class="space-x-2">
+      <button @click="toggleCompletedState" class="bg-green-500 text-white min-w-[170px] h-12 px-2 py-2 rounded my-2">
         <span v-if="isDone">Avmarkera som klar</span>
         <span v-if="!isDone">Markera som klar</span>
+      </button>
+
+      <button @click="removeTodo" class="bg-red-500 text-white min-w-[100px] h-12 px-4 py-2 text-sm rounded">
+        Ta bort
       </button>
     </div>
   </div>
