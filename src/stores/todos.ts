@@ -66,9 +66,12 @@ export const useTodosStore = defineStore('todos', () => {
 
   function removeTodo(id: number): void {
     todos.value = todos.value.filter(todo => todo.id !== id);
-
     saveTodosToLocalStorage();
-    console.log('knapptryckning');
+
+    if (DEBUGGING) {
+      console.log('Borttagen todo med id: ' + id);
+      console.table('todos.value');
+    }
 
     if (DEBUGGING) {
       console.log('Borttagen todo med id: ' + id);

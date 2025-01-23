@@ -9,6 +9,7 @@ const { todos } = storeToRefs(todoStore);
 
 const todoName = ref('');
 const showCompletedMessage = ref(false);
+const showRemovedMessage = ref(false);
 
 function addTodo() {
   todoStore.addNewTodo(todoName.value, false);
@@ -20,8 +21,14 @@ function onTaskCompleted() {
   setTimeout(clearMessage, 3000);
 }
 
+function onTaskRemoved() {
+  showRemovedMessage.value = true;
+  setTimeout(clearMessage, 3000);
+}
+
 function clearMessage() {
   showCompletedMessage.value = false;
+  showRemovedMessage.value = false;
 }
 </script>
 
@@ -29,9 +36,16 @@ function clearMessage() {
   <main class="bg-gray-700 px-2 py-2 mx-4 my-4">
     <div class="my-8">
       <p v-if="showCompletedMessage">Snyggt jobbat med att göra klart en uppgift!</p>
+      <p v-if="showRemovedMessage">Din uppgift togs bort</p>
 
       <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
-        <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" @task-completed="onTaskCompleted" />
+        <SingleTodo
+          :todo-text="todo.text"
+          :complete="todo.complete"
+          :id="todo.id"
+          @task-completed="onTaskCompleted"
+          @task-removed="onTaskRemoved"
+        />
       </div>
 
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>

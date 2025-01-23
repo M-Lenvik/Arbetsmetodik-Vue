@@ -24,7 +24,9 @@ function toggleCompletedState() {
 }
 
 function removeTodo() {
-  todoStore.removeTodo(props.id); // Anropa removeTodo-funktionen i store
+  emit('taskRemoved'); //Skicka signal till HomeView
+
+  todoStore.removeTodo(props.id); //Anropa removeTodo-funktionen i store
 }
 </script>
 
