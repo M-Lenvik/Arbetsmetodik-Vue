@@ -6,9 +6,11 @@ https://github.com/M-Lenvik
 
 
 ## Innehållsförteckning
-1. [Uppgift: Få en inblick i ramverk](#uppgift-få-en-inblick-i-ramverk)
-2. [Sammanfattning](#sammanfattning)
+1. [Beskrivning av sidan](#beskrivning-av-sidan)
+2. [Kom igång med projektet](#kom-igång-med-projektet)
 3. [Tekniker som använts](#tekniker-som-använts)
+4. [Uppgift: Få en inblick i ramverk](#uppgift-få-en-inblick-i-ramverk)
+5. [Sammanfattning](#sammanfattning)
 
 
 ## Beskrivning av sidan
