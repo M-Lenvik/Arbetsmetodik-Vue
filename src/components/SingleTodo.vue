@@ -8,7 +8,7 @@ const props = defineProps({
   complete: { type: Boolean, default: false },
 });
 
-const emit = defineEmits(['taskCompleted']);
+const emit = defineEmits(['taskCompleted', 'taskRemoved']);
 
 const todoStore = useTodosStore();
 
