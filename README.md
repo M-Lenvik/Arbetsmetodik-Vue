@@ -1,7 +1,8 @@
 # Kurs: Arbetsmetodik
+
 ## Utbildning till Frontend developer på Medieinstitutet
 
-Detta är en första inblick i att arbeta med ramverk, i detta fall Vue. Se uppgiftsbeskrivning nedan.
+test push Detta är en första inblick i att arbeta med ramverk, i detta fall Vue. Se uppgiftsbeskrivning nedan.
 
 Skapad av **Marie Lenvik** <br> https://github.com/M-Lenvik
 
@@ -59,4 +60,4 @@ npm run dev
 - Computed properties i en enkel version: vilken klass en todo ska ha beroende på om den är klar eller inte
 
 - ## Slutbetyg
-![Betyg Arbetsmetodik för utvecklare Vue](https://github.com/user-attachments/assets/df6f634a-4a4c-4bcf-95f5-a616c369786d)
+  ![Betyg Arbetsmetodik för utvecklare Vue](https://github.com/user-attachments/assets/df6f634a-4a4c-4bcf-95f5-a616c369786d)
