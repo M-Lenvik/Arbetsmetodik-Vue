@@ -13,6 +13,7 @@ Skapad av **Marie Lenvik** <br> https://github.com/M-Lenvik
 3. [Tekniker som använts](#tekniker-som-använts)
 4. [Uppgift: Få en inblick i ramverk](#uppgift-få-en-inblick-i-ramverk)
 5. [Sammanfattning](#sammanfattning)
+5. [Skärmdump](#skärmdump)
 6. [Slutbetyg](#slutbetyg)
 
 ## Beskrivning av sidan
@@ -58,6 +59,10 @@ npm run dev
 - State/stores med hjälp av Pinia Komponenter
 - Formulär med v-model/v-bind
 - Computed properties i en enkel version: vilken klass en todo ska ha beroende på om den är klar eller inte
+
+## Skärmdump
+<img width="353" alt="image" src="https://github.com/user-attachments/assets/343550e0-a629-4189-8ed8-e461aa42b305" />
+
 
 ## Slutbetyg
   ![Betyg Arbetsmetodik för utvecklare Vue](https://github.com/user-attachments/assets/df6f634a-4a4c-4bcf-95f5-a616c369786d)
