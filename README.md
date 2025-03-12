@@ -59,5 +59,5 @@ npm run dev
 - Formulär med v-model/v-bind
 - Computed properties i en enkel version: vilken klass en todo ska ha beroende på om den är klar eller inte
 
-- ## Slutbetyg
+## Slutbetyg
   ![Betyg Arbetsmetodik för utvecklare Vue](https://github.com/user-attachments/assets/df6f634a-4a4c-4bcf-95f5-a616c369786d)
