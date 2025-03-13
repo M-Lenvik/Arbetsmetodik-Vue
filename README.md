@@ -2,7 +2,7 @@
 
 ## Utbildning till Frontend developer på Medieinstitutet
 
-test push Detta är en första inblick i att arbeta med ramverk, i detta fall Vue. Se uppgiftsbeskrivning nedan.
+Detta är en första inblick i att arbeta med ramverk, i detta fall Vue. Se uppgiftsbeskrivning nedan.
 
 Skapad av **Marie Lenvik** <br> https://github.com/M-Lenvik
 
